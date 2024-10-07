@@ -1,8 +1,136 @@
-<html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Lakindu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .about-me, .skills, .projects {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-me h2, .skills h2, .projects h2 {
+            color: #333;
+            font-size: 2rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .about-me p, .skills ul, .projects ul {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .skills ul, .projects ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li, .projects li {
+            background-color: #e7e7e7;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .about-me h2, .skills h2, .projects h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-me p, .skills ul, .projects ul {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Lakindu's Portfolio</h1>
+</header>
+
+<div class="container">
+    <section class="about-me">
+        <h2>About Me</h2>
+        <p>Hello! I'm Lakindu, a passionate computer science student and cybersecurity enthusiast. I have experience in various programming languages and enjoy working on projects ranging from AI to web development.</p>
+    </section>
+
+    <section class="skills">
+        <h2>Programming Languages</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>SuperPrice - A price matching and delivery app built using Java and JavaScript.</li>
+            <li>Farmo Subscription System - Automated subscription backend with forgot password feature using Python.</li>
+            <li>Minecraft with Prolog - Logic programming using SWI-Prolog to create reasoning tools for game agents.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Lakindu | All Rights Reserved</p>
+</footer>
+
+</body>
 </html>
