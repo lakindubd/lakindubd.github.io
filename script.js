@@ -12,3 +12,18 @@ window.onscroll = function() {
 document.getElementById("backToTop").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light-mode';
+
+    document.body.classList.add(currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        document.body.classList.toggle('dark-mode');
+
+        const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        localStorage.setItem('theme', newTheme);
+    });
+});

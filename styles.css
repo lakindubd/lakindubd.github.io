@@ -1,13 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s;
+    color: #333; /* Set a consistent font color for the rest of the text */
+}
+
+body.light-mode {
+    background-color: #f4f4f4;
+}
+
+body.dark-mode {
+    background-color: #333;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: inherit;
+    color: inherit;
     text-align: center;
     padding: 1.5rem 0;
 }
@@ -15,8 +24,32 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    transition: color 0.3s; /* Smooth transition for color change */
 }
 
+body.light-mode header h1 {
+    color: #333; /* Color for light mode */
+}
+
+body.dark-mode header h1 {
+    color: #f4f4f4; /* Color for dark mode */
+}
+
+button#themeToggle {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#themeToggle:hover {
+    background-color: #777;
+}
+
+/* Other styles remain unchanged */
 .container {
     width: 80%;
     margin: 20px auto;
