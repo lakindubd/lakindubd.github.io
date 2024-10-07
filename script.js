@@ -14,16 +14,20 @@ document.getElementById("backToTop").onclick = function() {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('themeToggle');
-    const currentTheme = localStorage.getItem('theme') || 'light-mode';
+    if (typeof(Storage) !== "undefined") {
+        const themeToggle = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme') || 'light-mode';
 
-    document.body.classList.add(currentTheme);
+        document.body.classList.add(currentTheme);
 
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        document.body.classList.toggle('dark-mode');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            document.body.classList.toggle('dark-mode');
 
-        const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
-        localStorage.setItem('theme', newTheme);
-    });
+            const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+            localStorage.setItem('theme', newTheme);
+        });
+    } else {
+        console.error("Local storage is not supported in this browser.");
+    }
 });
