@@ -22,19 +22,6 @@ header {
     padding: 1.5rem 0;
 }
 
-@media (max-width: 768px) {
-    button#themeToggle {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        padding: 8px 16px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
 header h1 {
     margin: 0;
@@ -83,24 +70,6 @@ nav ul li a:hover,
     color: #555;
 }
 
-button#themeToggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 10; /* Ensure it stays on top */
-}
-
-
-button#themeToggle:hover {
-    background-color: #777;
-}
 
 
 body.light-mode header h1 {
