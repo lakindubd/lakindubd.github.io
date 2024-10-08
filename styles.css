@@ -87,7 +87,9 @@ button#themeToggle:hover {
     border-radius: 4px;
 }
 
-
+.container {
+    padding-bottom: 60px; /* Add padding to the bottom of the container */
+}
 
 footer {
     text-align: center;
