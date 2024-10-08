@@ -209,7 +209,7 @@ footer p {
     padding: 10px;
     position: fixed;
     z-index: 1;
-    bottom: 30px;
+    top: 20px; /* Position at the top */
     left: 50%;
     transform: translateX(-50%);
     transition: visibility 0s, opacity 0.5s ease-in-out;
