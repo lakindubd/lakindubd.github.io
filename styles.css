@@ -15,6 +15,7 @@ body.dark-mode {
 }
 
 header {
+    position: relative;
     background-color: inherit;
     color: inherit;
     text-align: center;
@@ -69,18 +70,22 @@ nav ul li a:hover,
 }
 
 button#themeToggle {
-    margin-top: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     padding: 10px 20px;
     background-color: #555;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button#themeToggle:hover {
     background-color: #777;
 }
+
 
 body.light-mode header h1 {
     color: #333; /* Color for light mode */
@@ -90,19 +95,6 @@ body.dark-mode header h1 {
     color: #f4f4f4; /* Color for dark mode */
 }
 
-button#themeToggle {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button#themeToggle:hover {
-    background-color: #777;
-}
 
 /* Other styles remain unchanged */
 .container {
@@ -217,7 +209,7 @@ footer p {
     padding: 10px;
     position: fixed;
     z-index: 1;
-    bottom: 30px;
+    top: 20px; /* Position at the top */
     left: 50%;
     transform: translateX(-50%);
     transition: visibility 0s, opacity 0.5s ease-in-out;
