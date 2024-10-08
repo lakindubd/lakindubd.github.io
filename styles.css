@@ -28,12 +28,14 @@ header h1 {
 }
 
 body.light-mode header h1,
-body.light-mode nav ul li a {
+body.light-mode nav ul li a,
+body.light-mode #email {
     color: #333;
 }
 
 body.dark-mode header h1,
-body.dark-mode nav ul li a {
+body.dark-mode nav ul li a,
+body.dark-mode #email {
     color: #f4f4f4;
 }
 
