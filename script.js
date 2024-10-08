@@ -27,6 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', newTheme);
     });
 
+    // Copy email to clipboard
+    const emailElement = document.getElementById('email');
+    const notification = document.getElementById('notification');
+
+    emailElement.addEventListener('click', () => {
+        const email = emailElement.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(() => {
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy email: ', err);
+        });
+    });
+
     // Scroll animations
     const observerOptions = {
         threshold: 0.1
@@ -45,5 +61,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
-
 
