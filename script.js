@@ -14,20 +14,36 @@ document.getElementById("backToTop").onclick = function() {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (typeof(Storage) !== "undefined") {
-        const themeToggle = document.getElementById('themeToggle');
-        const currentTheme = localStorage.getItem('theme') || 'light-mode';
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light-mode';
 
-        document.body.classList.add(currentTheme);
+    document.body.classList.add(currentTheme);
 
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            document.body.classList.toggle('dark-mode');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        document.body.classList.toggle('dark-mode');
 
-            const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
-            localStorage.setItem('theme', newTheme);
+        const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        localStorage.setItem('theme', newTheme);
+    });
+
+    // Scroll animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
         });
-    } else {
-        console.error("Local storage is not supported in this browser.");
-    }
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(section => {
+        observer.observe(section);
+    });
 });
+
+
