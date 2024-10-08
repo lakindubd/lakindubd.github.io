@@ -55,13 +55,16 @@ nav ul li {
     display: inline;
 }
 
-nav ul li a {
+nav ul li a,
+#email {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    cursor: pointer; /* Add cursor pointer for email */
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+#email:hover {
     color: #555;
 }
 
