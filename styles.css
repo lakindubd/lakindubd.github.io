@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s;
-    color: #333; /* Set a consistent font color for the rest of the text */
+    color: #333; 
 }
 
 body.light-mode {
@@ -26,7 +26,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
-    transition: color 0.3s; /* Smooth transition for color change */
+    transition: color 0.3s; 
 }
 
 body.light-mode header h1,
@@ -62,7 +62,7 @@ nav ul li a,
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-    cursor: pointer; /* Add cursor pointer for email */
+    cursor: pointer; 
 }
 
 nav ul li a:hover,
@@ -73,18 +73,18 @@ nav ul li a:hover,
 
 
 body.light-mode header h1 {
-    color: #333; /* Color for light mode */
+    color: #333;
 }
 
 body.dark-mode header h1 {
-    color: #f4f4f4; /* Color for dark mode */
+    color: #f4f4f4; 
 }
 
 
-/* Other styles remain unchanged */
 .container {
     width: 80%;
     margin: 20px auto;
+    padding: 0 10px; 
 }
 
 .about-me, .skills, .projects {
@@ -120,7 +120,7 @@ body.dark-mode header h1 {
 }
 
 .container {
-    padding-bottom: 60px; /* Add padding to the bottom of the container */
+    padding-bottom: 60px; 
 }
 
 footer {
@@ -158,18 +158,25 @@ footer p {
 @media (max-width: 768px) {
     .container {
         width: 90%;
+        padding: 0 5%; /
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem; 
     }
 
     .about-me h2, .skills h2, .projects h2 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; 
     }
 
     .about-me p, .skills ul, .projects ul {
-        font-size: 1rem;
+        font-size: 1rem; 
+    }
+
+    
+    #backToTop {
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
 }
 
@@ -194,7 +201,7 @@ footer p {
     padding: 10px;
     position: fixed;
     z-index: 1;
-    top: 20px; /* Position at the top */
+    top: 20px; 
     left: 50%;
     transform: translateX(-50%);
     transition: visibility 0s, opacity 0.5s ease-in-out;
@@ -213,11 +220,11 @@ footer p {
     z-index: 10;
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between icon and switch */
+    gap: 10px; 
 }
 
 .theme-icon {
-    width: 20px; /* Adjust size as needed */
+    width: 20px; 
     height: 20px;
 }
 
