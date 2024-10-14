@@ -14,6 +14,7 @@ body.dark-mode {
     background-color: #333;
 }
 
+/* Header */
 header {
     position: relative;
     background-color: inherit;
@@ -21,7 +22,6 @@ header {
     text-align: center;
     padding: 1.5rem 0;
 }
-
 
 header h1 {
     margin: 0;
@@ -53,10 +53,6 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a,
 #email {
     text-decoration: none;
@@ -70,29 +66,46 @@ nav ul li a:hover,
     color: #555;
 }
 
-
-
-body.light-mode header h1 {
-    color: #333;
-}
-
-body.dark-mode header h1 {
-    color: #f4f4f4; 
-}
-
-
+/* Main Container */
 .container {
     width: 80%;
     margin: 20px auto;
-    padding: 0 10px; 
+    padding: 0 10px;
+    padding-bottom: 60px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 0 5%;
+    }
+
+    header h1 {
+        font-size: 2rem; 
+    }
+
+    .about-me h2, .skills h2, .projects h2 {
+        font-size: 1.8rem; 
+    }
+
+    .about-me p, .skills ul, .projects ul {
+        font-size: 1rem; 
+    }
+
+    #backToTop {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Sections: About Me, Skills, Projects */
 .about-me, .skills, .projects {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
 .about-me h2, .skills h2, .projects h2 {
@@ -102,27 +115,20 @@ body.dark-mode header h1 {
     padding-bottom: 10px;
 }
 
-.about-me p, .skills ul, .projects ul {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
 .skills ul, .projects ul {
     list-style: none;
     padding: 0;
 }
 
 .skills li, .projects li {
-    background-color: #e7e7e7;
+    background-color: #f4f4f4;
     margin: 10px 0;
     padding: 10px;
     border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.container {
-    padding-bottom: 60px; 
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -138,6 +144,7 @@ footer p {
     font-size: 1rem;
 }
 
+/* Back to Top Button */
 #backToTop {
     position: fixed;
     bottom: 20px;
@@ -155,31 +162,85 @@ footer p {
     background-color: #555;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 0 5%; /
-    }
-
-    header h1 {
-        font-size: 2rem; 
-    }
-
-    .about-me h2, .skills h2, .projects h2 {
-        font-size: 1.8rem; 
-    }
-
-    .about-me p, .skills ul, .projects ul {
-        font-size: 1rem; 
-    }
-
-    
-    #backToTop {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
+/* Dark Mode Adjustments */
+body.dark-mode .about-me, 
+body.dark-mode .skills, 
+body.dark-mode .projects {
+    background-color: #444;
+    color: #f4f4f4;
+    border-color: #888;
 }
 
+body.dark-mode .skills li, 
+body.dark-mode .projects li {
+    background-color: #666;
+    color: #f4f4f4;
+}
+
+body.dark-mode .about-me h2, 
+body.dark-mode .skills h2, 
+body.dark-mode .projects h2 {
+    color: #f4f4f4;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+/* Form Styles */
+.contact-me {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-me input,
+.contact-me textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.contact-me input:focus,
+.contact-me textarea:focus {
+    border-color: #555;
+}
+
+/* Dark Mode for Contact Form */
+body.dark-mode .contact-me {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+body.dark-mode .contact-me input,
+body.dark-mode .contact-me textarea {
+    background-color: #666;
+    color: #f4f4f4;
+    border: 1px solid #888;
+}
+
+body.dark-mode .contact-me input::placeholder,
+body.dark-mode .contact-me textarea::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode .contact-me button {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .contact-me button:hover {
+    background-color: #777;
+}
+
+/* Email Validation Message */
+#emailValidationResult {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Scroll Animations */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -191,6 +252,7 @@ footer p {
     transform: translateY(0);
 }
 
+/* Notification */
 .notification {
     visibility: hidden;
     min-width: 250px;
@@ -213,6 +275,7 @@ footer p {
     opacity: 1;
 }
 
+/* Theme Switch */
 .theme-switch-wrapper {
     position: fixed;
     bottom: 20px;
@@ -220,7 +283,7 @@ footer p {
     z-index: 10;
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .theme-icon {
@@ -271,107 +334,4 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(20px);
-}
-
-/* Form styles */
-.contact-me {
-    background-color: #fff; /* Light background for the form */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-me input,
-.contact-me textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s;
-}
-
-.contact-me input:focus,
-.contact-me textarea:focus {
-    border-color: #555; /* Darker border on focus */
-}
-
-body.dark-mode .contact-me {
-    background-color: #444; /* Dark background for dark mode */
-    color: #f4f4f4; /* Light text color */
-}
-
-body.dark-mode .contact-me input,
-body.dark-mode .contact-me textarea {
-    background-color: #666; /* Darker input background */
-    color: #f4f4f4; /* Light text color */
-    border: 1px solid #888; /* Lighter border for dark mode */
-}
-
-body.dark-mode .contact-me input::placeholder,
-body.dark-mode .contact-me textarea::placeholder {
-    color: #ccc; /* Placeholder color for dark mode */
-}
-
-body.dark-mode .contact-me button {
-    background-color: #555; /* Button background for dark mode */
-    color: #fff; /* Button text color */
-}
-
-body.dark-mode .contact-me button:hover {
-    background-color: #777; /* Button hover color for dark mode */
-}
-
-#emailValidationResult {
-    font-size: 1rem;
-    margin-top: 5px;
-}
-
-/* Light Mode - Default */
-.about-me, .skills, .projects {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #333; /* Text color */
-}
-
-.skills li, .projects li {
-    background-color: #f4f4f4; /* Light background for list items */
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
-}
-
-/* Dark Mode */
-body.dark-mode .about-me, body.dark-mode .skills, body.dark-mode .projects {
-    background-color: #444; /* Dark background for the cards */
-    color: #f4f4f4; /* Light text color */
-    border-color: #888; /* Adjusted border color */
-}
-
-body.dark-mode .about-me h2, body.dark-mode .skills h2, body.dark-mode .projects h2 {
-    color: #f4f4f4;
-    border-bottom: 2px solid #f4f4f4; /* Light border under headings */
-}
-
-body.dark-mode .skills li, body.dark-mode .projects li {
-    background-color: #666; /* Dark background for list items */
-    color: #f4f4f4; /* Light text color for list items */
-}
-
-/* Contact Me Card - Already Defined */
-body.dark-mode .contact-me {
-    background-color: #444; /* Dark background for dark mode */
-    color: #f4f4f4; /* Light text color */
-}
-
-/* Other styles for form inputs and buttons in dark mode */
-body.dark-mode .contact-me input,
-body.dark-mode .contact-me textarea {
-    background-color: #666; /* Darker input background */
-    color: #f4f4f4; /* Light text color */
-    border: 1px solid #888; /* Lighter border for dark mode */
 }
