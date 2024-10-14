@@ -272,3 +272,52 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(20px);
 }
+
+/* Form styles */
+.contact-me {
+    background-color: #fff; /* Light background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-me input,
+.contact-me textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.contact-me input:focus,
+.contact-me textarea:focus {
+    border-color: #555; /* Darker border on focus */
+}
+
+body.dark-mode .contact-me {
+    background-color: #444; /* Dark background for dark mode */
+    color: #f4f4f4; /* Light text color */
+}
+
+body.dark-mode .contact-me input,
+body.dark-mode .contact-me textarea {
+    background-color: #666; /* Darker input background */
+    color: #f4f4f4; /* Light text color */
+    border: 1px solid #888; /* Lighter border for dark mode */
+}
+
+body.dark-mode .contact-me input::placeholder,
+body.dark-mode .contact-me textarea::placeholder {
+    color: #ccc; /* Placeholder color for dark mode */
+}
+
+body.dark-mode .contact-me button {
+    background-color: #555; /* Button background for dark mode */
+    color: #fff; /* Button text color */
+}
+
+body.dark-mode .contact-me button:hover {
+    background-color: #777; /* Button hover color for dark mode */
+}

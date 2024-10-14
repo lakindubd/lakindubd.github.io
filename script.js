@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
-        document.body.classList.toggle('dark-mode');
+        document.body.classList.toggle('dark-mode')
 
         const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
         localStorage.setItem('theme', newTheme);
@@ -53,12 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
-            }
+            } 
         });
     }, observerOptions);
 
     document.querySelectorAll('.animate-on-scroll').forEach(section => {
         observer.observe(section);
     });
-});
 
+    document.getElementById('contactForm').addEventListener('submit', function() {
+        const formNotification = document.getElementById('formNotification');
+        formNotification.classList.add('show');
+        setTimeout(() => {
+            formNotification.classList.remove('show');
+        }, 2000);
+    });
+});
