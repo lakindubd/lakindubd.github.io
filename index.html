@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Lakindu</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
     <link rel="icon" href="imgs/favicon.jpeg" type="image/x-icon">
 </head>
@@ -65,7 +66,8 @@
             <input type="text" id="name" name="entry.541824981" required>
             
             <label for="email">Email:</label>
-            <input type="text" id="email" name="entry.294373417" required> 
+            <input type="email" id="email" name="entry.294373417" required> 
+            <p id="emailValidationResult"></p> <!-- Email validation result placeholder -->
             
             <label for="description">Description:</label>
             <textarea id="description" name="entry.1415234793" required></textarea> 
