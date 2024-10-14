@@ -57,11 +57,29 @@
             <li>Minecraft with Prolog - Logic programming using SWI-Prolog to create reasoning tools for game agents.</li>
         </ul>
     </section>
+
+    <section class="contact-me">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeNp9oMSYfmdPsffX7-cWkQHOuf9TAHOE7QVOUhPupIKfCvHQ/formResponse" method="POST" target="hidden_iframe">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="entry.541824981" required>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="entry.294373417" required> 
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="entry.1415234793" required></textarea> 
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="formNotification" class="notification">Message sent!</div>
+    </section>
 </div>
 
 <footer>
     <p>&copy; 2024 Lakindu | All Rights Reserved</p>
 </footer>
 <button id="backToTop" style="display: none;">Back to Top</button>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 </body>
 </html>
