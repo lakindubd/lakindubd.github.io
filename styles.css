@@ -321,3 +321,8 @@ body.dark-mode .contact-me button {
 body.dark-mode .contact-me button:hover {
     background-color: #777; /* Button hover color for dark mode */
 }
+
+#emailValidationResult {
+    font-size: 1rem;
+    margin-top: 5px;
+}
