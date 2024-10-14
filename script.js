@@ -13,6 +13,7 @@ document.getElementById("backToTop").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+// Theme toggle functionality
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
     const currentTheme = localStorage.getItem('theme') || 'light-mode';
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
-        document.body.classList.toggle('dark-mode')
+        document.body.classList.toggle('dark-mode');
 
         const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
         localStorage.setItem('theme', newTheme);
@@ -61,6 +62,32 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
+    // Email validation function
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
+    const validate = () => {
+        const $result = $('#emailValidationResult');
+        const email = $('#email').val();
+        $result.text('');
+
+        if (validateEmail(email)) {
+            $result.text(email + ' is valid.'); 
+            $result.css('color', 'green');
+        } else {
+            $result.text(email + ' is invalid.');
+            $result.css('color', 'red');
+        }
+        return false;
+    };
+
+    // Validate email on input
+    $('#email').on('input', validate);
+
+    // Form submission notification
     document.getElementById('contactForm').addEventListener('submit', function() {
         const formNotification = document.getElementById('formNotification');
         formNotification.classList.add('show');
