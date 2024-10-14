@@ -326,3 +326,52 @@ body.dark-mode .contact-me button:hover {
     font-size: 1rem;
     margin-top: 5px;
 }
+
+/* Light Mode - Default */
+.about-me, .skills, .projects {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333; /* Text color */
+}
+
+.skills li, .projects li {
+    background-color: #f4f4f4; /* Light background for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+/* Dark Mode */
+body.dark-mode .about-me, body.dark-mode .skills, body.dark-mode .projects {
+    background-color: #444; /* Dark background for the cards */
+    color: #f4f4f4; /* Light text color */
+    border-color: #888; /* Adjusted border color */
+}
+
+body.dark-mode .about-me h2, body.dark-mode .skills h2, body.dark-mode .projects h2 {
+    color: #f4f4f4;
+    border-bottom: 2px solid #f4f4f4; /* Light border under headings */
+}
+
+body.dark-mode .skills li, body.dark-mode .projects li {
+    background-color: #666; /* Dark background for list items */
+    color: #f4f4f4; /* Light text color for list items */
+}
+
+/* Contact Me Card - Already Defined */
+body.dark-mode .contact-me {
+    background-color: #444; /* Dark background for dark mode */
+    color: #f4f4f4; /* Light text color */
+}
+
+/* Other styles for form inputs and buttons in dark mode */
+body.dark-mode .contact-me input,
+body.dark-mode .contact-me textarea {
+    background-color: #666; /* Darker input background */
+    color: #f4f4f4; /* Light text color */
+    border: 1px solid #888; /* Lighter border for dark mode */
+}
