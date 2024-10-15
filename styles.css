@@ -12,6 +12,7 @@ body.light-mode {
 
 body.dark-mode {
     background-color: #333;
+    color: #f4f4f4; /* Change the default text color in dark mode */
 }
 
 /* Header */
@@ -38,7 +39,7 @@ body.light-mode #email {
 body.dark-mode header h1,
 body.dark-mode nav ul li a,
 body.dark-mode #email {
-    color: #f4f4f4;
+    color: #f4f4f4; /* Header and link colors in dark mode */
 }
 
 nav {
@@ -167,8 +168,7 @@ body.dark-mode .about-me,
 body.dark-mode .skills, 
 body.dark-mode .projects {
     background-color: #444;
-    color: #f4f4f4;
-    border-color: #888;
+    color: #f4f4f4; /* Text color for sections in dark mode */
 }
 
 body.dark-mode .skills li, 
@@ -180,8 +180,23 @@ body.dark-mode .projects li {
 body.dark-mode .about-me h2, 
 body.dark-mode .skills h2, 
 body.dark-mode .projects h2 {
-    color: #f4f4f4;
-    border-bottom: 2px solid #f4f4f4;
+    color: #f4f4f4; /* Section headings in dark mode */
+}
+
+body.dark-mode .contact-me {
+    background-color: #444;
+    color: #f4f4f4; /* Text color for contact form in dark mode */
+}
+
+body.dark-mode .contact-me input,
+body.dark-mode .contact-me textarea {
+    background-color: #666;
+    color: #f4f4f4; /* Input and textarea text color in dark mode */
+}
+
+body.dark-mode .contact-me button {
+    background-color: #555;
+    color: #fff; /* Button text color in dark mode */
 }
 
 /* Form Styles */
