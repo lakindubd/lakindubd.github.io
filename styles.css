@@ -166,13 +166,13 @@ footer p {
 /* Dark Mode Adjustments */
 body.dark-mode .about-me, 
 body.dark-mode .skills, 
-body.dark-mode .projects {
+body.dark.mode .projects {
     background-color: #444;
     color: #f4f4f4; /* Text color for sections in dark mode */
 }
 
 body.dark-mode .skills li, 
-body.dark-mode .projects li {
+body.dark.mode .projects li {
     background-color: #666;
     color: #f4f4f4;
 }
@@ -269,20 +269,15 @@ body.dark-mode .contact-me button:hover {
 
 /* Notification */
 .notification {
-    visibility: hidden;
-    min-width: 250px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    position: fixed;
-    z-index: 1;
-    top: 20px; 
-    left: 50%;
-    transform: translateX(-50%);
-    transition: visibility 0s, opacity 0.5s ease-in-out;
-    opacity: 0;
+    display: none; /* Initially hidden */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px; /* Some padding */
+    position: fixed; /* Fixed position */
+    top: 20px; /* 20px from the top */
+    right: 20px; /* 20px from the right */
+    z-index: 1000; /* Ensure it appears above other content */
+    border-radius: 5px; /* Rounded corners */
 }
 
 .notification.show {
@@ -349,4 +344,10 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(20px);
+}
+
+.icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    vertical-align: middle; /* Aligns the icon with text */
 }
