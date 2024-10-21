@@ -28,22 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', newTheme);
     });
 
-    // Copy email to clipboard
-    const emailElement = document.getElementById('email');
-    const notification = document.getElementById('notification');
-
-    emailElement.addEventListener('click', () => {
-        const email = emailElement.getAttribute('data-email');
-        navigator.clipboard.writeText(email).then(() => {
-            notification.classList.add('show');
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 2000);
-        }).catch(err => {
-            console.error('Failed to copy email: ', err);
-        });
-    });
-
     // Scroll animations
     const observerOptions = {
         threshold: 0.1
@@ -94,5 +78,23 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             formNotification.classList.remove('show');
         }, 2000);
+    });
+
+    document.getElementById('emailIcon').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const email = 'lakindud@yahoo.com'; // Email to copy
+        navigator.clipboard.writeText(email).then(() => {
+            // Show the notification
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block'; // Show the notification
+            notification.textContent = 'Email copied to clipboard!'; // Set the notification text
+
+            // Hide the notification after 3 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
     });
 });
