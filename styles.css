@@ -72,13 +72,14 @@ nav ul li a:hover,
     width: 80%;
     margin: 20px auto;
     padding: 0 10px;
-    padding-bottom: 60px;
+    padding-bottom: 60px; /* Add padding to the bottom of the container */
 }
 
 @media (max-width: 768px) {
     .container {
         width: 90%;
         padding: 0 5%;
+        padding-bottom: 80px; /* Increase padding for mobile devices */
     }
 
     header h1 {
@@ -96,6 +97,10 @@ nav ul li a:hover,
     #backToTop {
         padding: 8px 12px;
         font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px 0; /* Adjust footer padding for mobile */
     }
 }
 
@@ -132,7 +137,7 @@ nav ul li a:hover,
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #333;
     color: #fff;
     position: fixed;
