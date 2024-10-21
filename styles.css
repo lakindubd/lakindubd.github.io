@@ -166,13 +166,13 @@ footer p {
 /* Dark Mode Adjustments */
 body.dark-mode .about-me, 
 body.dark-mode .skills, 
-body.dark.mode .projects {
+body.dark-mode .projects {
     background-color: #444;
     color: #f4f4f4; /* Text color for sections in dark mode */
 }
 
 body.dark-mode .skills li, 
-body.dark.mode .projects li {
+body.dark-mode .projects li {
     background-color: #666;
     color: #f4f4f4;
 }
